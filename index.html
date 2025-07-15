@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Generator, by GD with GD</title>
+
+	<meta name="author" content="Gabriel Drozdov / GD with GD">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
+	<meta name="description" content="Fun, free resources for learning and teaching creative and technical design skills.">
+	<meta property="og:url" content="https://generator.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="GD with GD">
+	<meta property="og:description" content="Fun, free resources for learning and teaching creative and technical design skills.">
+	<meta property="og:image" content="/assets/meta/opengraph.png">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>"/>
+
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+	<div class="container" data-controls="true">
+
+		<div class="output-container">
+			<main class="output" data-bubble-color="0" data-bubble-border="1" data-text-move="true" data-annotation-top="true" data-annotation-bottom="true" data-text="true"  data-bubbles="true" id="output">
+				<div class="output-text output-text-outline"><span class="output-text-word" data-index="0"><span class="output-text-letter">G</span><span class="output-text-letter">D</span></span><span>&nbsp;</span><span class="output-text-word" data-index="1"><span class="output-text-letter">w</span><span class="output-text-letter">i</span><span class="output-text-letter">t</span><span class="output-text-letter">h</span></span><span>&nbsp;</span><span class="output-text-word" data-index="2"><span class="output-text-letter">G</span><span class="output-text-letter">D</span></span><span>&nbsp;</span></div>
+				<div class="output-text output-text-fill"><span class="output-text-word" data-index="0"><span class="output-text-letter">G</span><span class="output-text-letter">D</span></span><span>&nbsp;</span><span class="output-text-word" data-index="1"><span class="output-text-letter">w</span><span class="output-text-letter">i</span><span class="output-text-letter">t</span><span class="output-text-letter">h</span></span><span>&nbsp;</span><span class="output-text-word" data-index="2"><span class="output-text-letter">G</span><span class="output-text-letter">D</span></span><span>&nbsp;</span></div>
+
+				<div class="output-annotation output-annotation-top">
+					<span>Graphic Design!</span>
+					<svg viewBox="0 0 100 41.885"><path d="M0,0c24.15,0,38.728,15.027,47.043,39.768.949,2.823,4.966,2.823,5.915,0C61.272,15.027,75.85,0,100,0H0Z"/></svg>
+				</div>
+				<div class="output-annotation output-annotation-bottom">
+					<svg viewBox="0 0 100 41.885"><path d="M0,0c24.15,0,38.728,15.027,47.043,39.768.949,2.823,4.966,2.823,5.915,0C61.272,15.027,75.85,0,100,0H0Z"/></svg>
+					<span>Gabriel Drozdov!</span>
+				</div>
+			</main>
+		</div>
+
+		<nav class="controls">
+
+			<header class="header" style="--primary: var(--off-white);" id="header">
+				<div class="controls-section-header">
+					<h1 class="header-title">
+						<a href="https://gdwithgd.com/" target="_blank">GD with GD</a>
+						<span>Generator</span>
+					</h1>
+					<p class="header-desc">
+						Create your own art in the style of <a href="https://gdwithgd.com/" target="_blank">GD with GD</a>! Change the settings on the right and watch the animation instantly change.
+					</p>
+				</div>
+
+				<div class="controls-divider"></div>
+	
+				<h3 class="controls-subsection-heading">Collapse Settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="collapseAll();">Collapse</div>
+						<div onclick="expandAll();">Expand</div>
+					</div>
+				</div>
+	
+				<h3 class="controls-subsection-heading">Present</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="window.print();">Save PDF</div>
+						<div onclick="activateFullscreen();">Fullscreen</div>
+					</div>
+				</div>
+	
+				<h3 class="controls-subsection-heading">All settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="randomizeAll();">Randomize</div>
+						<div onclick="resetAll();">Reset</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="controls-section" style="--primary: var(--pink);" id="main-text">
+				<h2 class="controls-section-heading" onclick="collapseSection('main-text');">Main Text</h2>
+
+				<button class="controls-section-hide" onclick="toggleText();">
+					<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm8.413 7c-1.837 2.878-4.897 5.5-8.413 5.5-3.465 0-6.532-2.632-8.404-5.5 1.871-2.868 4.939-5.5 8.404-5.5 3.518 0 6.579 2.624 8.413 5.5zm-8.411-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill-rule="nonzero"/></svg>
+				</button>
+
+				<p class="controls-section-desc">Drag each word on the canvas to change its position!</p>
+
+				<h3 class="controls-subsection-heading">Input</h3>
+				<div class="controls-subsection">
+					<input type="text" class="controls-input" id="input" value="GD with GD" placeholder="Type here!" oninput="updateText();">
+				</div>
+
+				<h3 class="controls-subsection-heading">Fill</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-text-fill="var(--pink)" style="background-color: var(--pink)" onclick="setTextFillColor('var(--pink)')"></div>
+						<div data-text-fill="var(--green)" style="background-color: var(--green)" onclick="setTextFillColor('var(--green)')"></div>
+						<div data-text-fill="var(--blue)" style="background-color: var(--blue)" onclick="setTextFillColor('var(--blue)')"></div>
+						<div data-text-fill="var(--yellow)" style="background-color: var(--yellow)" onclick="setTextFillColor('var(--yellow)')"></div>
+						<div data-text-fill="var(--purple)" style="background-color: var(--purple)" onclick="setTextFillColor('var(--purple)')"></div>
+						<div data-text-fill="var(--red)" style="background-color: var(--red)" onclick="setTextFillColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-text-fill="var(--off-white)" style="background-color: var(--off-white)" onclick="setTextFillColor('var(--off-white)')"></div>
+						<div data-text-fill="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setTextFillColor('var(--light-gray)')"></div>
+						<div data-text-fill="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setTextFillColor('var(--dark-gray)')"></div>
+						<div data-text-fill="var(--off-black)" style="background-color: var(--off-black)" onclick="setTextFillColor('var(--off-black)')" data-active="1"></div>
+						<div data-text-fill="transparent" onclick="setTextFillColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div>
+
+				<!-- <h3 class="controls-subsection-heading">Outline</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-text-outline-color="var(--pink)" style="background-color: var(--pink)" onclick="setTextOutlineColor('var(--pink)')"></div>
+						<div data-text-outline-color="var(--green)" style="background-color: var(--green)" onclick="setTextOutlineColor('var(--green)')"></div>
+						<div data-text-outline-color="var(--blue)" style="background-color: var(--blue)" onclick="setTextOutlineColor('var(--blue)')"></div>
+						<div data-text-outline-color="var(--yellow)" style="background-color: var(--yellow)" onclick="setTextOutlineColor('var(--yellow)')"></div>
+						<div data-text-outline-color="var(--purple)" style="background-color: var(--purple)" onclick="setTextOutlineColor('var(--purple)')"></div>
+						<div data-text-outline-color="var(--red)" style="background-color: var(--red)" onclick="setTextOutlineColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-text-outline-color="var(--off-white)" style="background-color: var(--off-white)" onclick="setTextOutlineColor('var(--off-white)')"></div>
+						<div data-text-outline-color="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setTextOutlineColor('var(--light-gray)')"></div>
+						<div data-text-outline-color="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setTextOutlineColor('var(--dark-gray)')"></div>
+						<div data-text-outline-color="var(--off-black)" style="background-color: var(--off-black)" onclick="setTextOutlineColor('var(--off-black)')" data-active="1"></div>
+						<div data-text-outline-color="transparent" onclick="setTextOutlineColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div> -->
+
+				<!-- <h3 class="controls-subsection-heading">Outline Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="text-outline-size" name="text-outline-size" min="0" max="5" step=".1" value="2" oninput="setTextOutlineSize(this.value)">
+						<label class="controls-slider-label" for="text-outline-size" onclick="resetTextOutlineSize()">2</label>
+					</div>
+				</div> -->
+
+				<h3 class="controls-subsection-heading">Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-size" name="font-size" type="range" min="1.0" max="30.0" step=".1" value="15" oninput="setFontSize(this.value)">
+						<label class="controls-slider-label" for="font-size" onclick="resetFontSize()">15</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Weight</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-weight" name="font-weight" type="range" min="100" max="900" step="10" value="700" oninput="setFontWeight(this.value)">
+						<label class="controls-slider-label" for="font-weight" onclick="resetFontWeight()">700</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Serif</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-serif" name="font-serif" type="range" min="0" max="100" step="1" value="0" oninput="setFontSerif(this.value)">
+						<label class="controls-slider-label" for="font-serif" onclick="resetFontSerif()">0</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">Animation</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div data-text-animation="true" onclick="toggleTextAnimation(true);" data-active="1">On</div>
+						<div data-text-animation="false" onclick="toggleTextAnimation(false);">Off</div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Drift</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-drift" name="font-drift" type="range" min="-2" max="2" step=".1" value="-.2" oninput="setFontDrift(this.value)">
+						<label class="controls-slider-label" for="font-drift" onclick="resetFontDrift()">-0.2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Rotation</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-rotation" name="font-rotation" type="range" min="-90" max="90" step="1" value="-2" oninput="setFontRotation(this.value)">
+						<label class="controls-slider-label" for="font-rotation" onclick="resetFontRotation()">-2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Speed</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="font-speed" name="font-speed" type="range" min="0" max="5" step=".1" value="2.5" oninput="setFontSpeed(this.value)">
+						<label class="controls-slider-label" for="font-speed" onclick="resetFontSpeed()">2.5</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">All Settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="updateText();">Reposition Text</div>
+					</div>
+					<div class="controls-toggles">
+						<div onclick="randomizeTextSettings();">Randomize</div>
+						<div onclick="resetTextSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="controls-section" style="--primary: var(--green);" id="top-text">
+				<h2 class="controls-section-heading" onclick="collapseSection('top-text');">Top Text</h2>
+
+				<button class="controls-section-hide" onclick="toggleAnnotationTop();">
+					<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm8.413 7c-1.837 2.878-4.897 5.5-8.413 5.5-3.465 0-6.532-2.632-8.404-5.5 1.871-2.868 4.939-5.5 8.404-5.5 3.518 0 6.579 2.624 8.413 5.5zm-8.411-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill-rule="nonzero"/></svg>
+				</button>
+
+				<p class="controls-section-desc">Drag the text on the canvas to change its position!</p>
+
+				<h3 class="controls-subsection-heading">Input</h3>
+				<div class="controls-subsection">
+					<input type="text" class="controls-input" id="annotation-input-top" value="Graphic Design!" placeholder="Type here!" oninput="updateAnnotationTopText();">
+				</div>
+
+				<h3 class="controls-subsection-heading">Background Color</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-top-background="var(--pink)" style="background-color: var(--pink)" onclick="setAnnotationTopBackgroundColor('var(--pink)')"></div>
+						<div data-top-background="var(--green)" style="background-color: var(--green)" onclick="setAnnotationTopBackgroundColor('var(--green)')"></div>
+						<div data-top-background="var(--blue)" style="background-color: var(--blue)" onclick="setAnnotationTopBackgroundColor('var(--blue)')"></div>
+						<div data-top-background="var(--yellow)" style="background-color: var(--yellow)" onclick="setAnnotationTopBackgroundColor('var(--yellow)')"></div>
+						<div data-top-background="var(--purple)" style="background-color: var(--purple)" onclick="setAnnotationTopBackgroundColor('var(--purple)')"></div>
+						<div data-top-background="var(--red)" style="background-color: var(--red)" onclick="setAnnotationTopBackgroundColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-top-background="var(--off-white)" style="background-color: var(--off-white)" onclick="setAnnotationTopBackgroundColor('var(--off-white)')" data-active="1"></div>
+						<div data-top-background="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setAnnotationTopBackgroundColor('var(--light-gray)')"></div>
+						<div data-top-background="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setAnnotationTopBackgroundColor('var(--dark-gray)')"></div>
+						<div data-top-background="var(--off-black)" style="background-color: var(--off-black)" onclick="setAnnotationTopBackgroundColor('var(--off-black)')"></div>
+						<div data-top-background="transparent" onclick="setAnnotationTopBackgroundColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Text Color</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-top-text="var(--pink)" style="background-color: var(--pink)" onclick="setAnnotationTopFontColor('var(--pink)')"></div>
+						<div data-top-text="var(--green)" style="background-color: var(--green)" onclick="setAnnotationTopFontColor('var(--green)')"></div>
+						<div data-top-text="var(--blue)" style="background-color: var(--blue)" onclick="setAnnotationTopFontColor('var(--blue)')"></div>
+						<div data-top-text="var(--yellow)" style="background-color: var(--yellow)" onclick="setAnnotationTopFontColor('var(--yellow)')"></div>
+						<div data-top-text="var(--purple)" style="background-color: var(--purple)" onclick="setAnnotationTopFontColor('var(--purple)')"></div>
+						<div data-top-text="var(--red)" style="background-color: var(--red)" onclick="setAnnotationTopFontColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-top-text="var(--off-white)" style="background-color: var(--off-white)" onclick="setAnnotationTopFontColor('var(--off-white)')"></div>
+						<div data-top-text="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setAnnotationTopFontColor('var(--light-gray)')"></div>
+						<div data-top-text="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setAnnotationTopFontColor('var(--dark-gray)')"></div>
+						<div data-top-text="var(--off-black)" style="background-color: var(--off-black)" onclick="setAnnotationTopFontColor('var(--off-black)')" data-active="1"></div>
+						<div data-top-text="transparent" onclick="setAnnotationTopFontColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-size" name="annotation-top-font-size" type="range" min="1.0" max="5.0" step=".1" value="2" oninput="setAnnotationTopFontSize(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-size" onclick="resetAnnotationTopFontSize()">2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Weight</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-weight" name="annotation-top-font-weight" type="range" min="100" max="900" step="10" value="700" oninput="setAnnotationTopFontWeight(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-weight" onclick="resetAnnotationTopFontWeight()">700</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Serif</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-serif" name="annotation-top-font-serif" type="range" min="0" max="100" step="1" value="0" oninput="setAnnotationTopFontSerif(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-serif" onclick="resetAnnotationTopFontSerif()">0</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">Animation</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div data-top-animation="true" onclick="toggleAnnotationTopAnimation(true);" data-active="1">On</div>
+						<div data-top-animation="false" onclick="toggleAnnotationTopAnimation(false);">Off</div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Drift</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-drift" name="annotation-top-font-drift" type="range" min="0" max="5" step=".1" value="1" oninput="setAnnotationTopFontDrift(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-drift" onclick="resetAnnotationTopFontDrift()">1</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Rotation</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-rotation" name="annotation-top-font-rotation" type="range" min="-90" max="90" step="1" value="-5" oninput="setAnnotationTopFontRotation(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-rotation" onclick="resetAnnotationTopFontRotation()">-5</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Speed</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-top-font-speed" name="annotation-top-font-speed" type="range" min=".5" max="5" step=".1" value="4" oninput="setAnnotationTopFontSpeed(this.value)">
+						<label class="controls-slider-label" for="annotation-top-font-speed" onclick="resetAnnotationTopFontSpeed()">4</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">All</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="resetAnnotationTopPosition();">Reposition Text</div>
+					</div>
+					<div class="controls-toggles">
+						<div onclick="randomizeAnnotationTopSettings();">Randomize</div>
+						<div onclick="resetAnnotationTopSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="controls-section" style="--primary: var(--blue);" id="bottom-text">
+				<h2 class="controls-section-heading" onclick="collapseSection('bottom-text');">Bottom Text</h2>
+
+				<button class="controls-section-hide" onclick="toggleAnnotationBottom();">
+					<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm8.413 7c-1.837 2.878-4.897 5.5-8.413 5.5-3.465 0-6.532-2.632-8.404-5.5 1.871-2.868 4.939-5.5 8.404-5.5 3.518 0 6.579 2.624 8.413 5.5zm-8.411-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill-rule="nonzero"/></svg>
+				</button>
+
+				<p class="controls-section-desc">Drag the text on the canvas to change its position!</p>
+
+				<h3 class="controls-subsection-heading">Input</h3>
+				<div class="controls-subsection">
+					<input type="text" class="controls-input" id="annotation-input-bottom" value="Gabriel Drozdov!" placeholder="Type here!" oninput="updateAnnotationBottomText();">
+				</div>
+
+				<h3 class="controls-subsection-heading">Background Color</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-bottom-background="var(--pink)" style="background-color: var(--pink)" onclick="setAnnotationBottomBackgroundColor('var(--pink)')"></div>
+						<div data-bottom-background="var(--green)" style="background-color: var(--green)" onclick="setAnnotationBottomBackgroundColor('var(--green)')"></div>
+						<div data-bottom-background="var(--blue)" style="background-color: var(--blue)" onclick="setAnnotationBottomBackgroundColor('var(--blue)')"></div>
+						<div data-bottom-background="var(--yellow)" style="background-color: var(--yellow)" onclick="setAnnotationBottomBackgroundColor('var(--yellow)')"></div>
+						<div data-bottom-background="var(--purple)" style="background-color: var(--purple)" onclick="setAnnotationBottomBackgroundColor('var(--purple)')"></div>
+						<div data-bottom-background="var(--red)" style="background-color: var(--red)" onclick="setAnnotationBottomBackgroundColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-bottom-background="var(--off-white)" style="background-color: var(--off-white)" onclick="setAnnotationBottomBackgroundColor('var(--off-white)')" data-active="1"></div>
+						<div data-bottom-background="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setAnnotationBottomBackgroundColor('var(--light-gray)')"></div>
+						<div data-bottom-background="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setAnnotationBottomBackgroundColor('var(--dark-gray)')"></div>
+						<div data-bottom-background="var(--off-black)" style="background-color: var(--off-black)" onclick="setAnnotationBottomBackgroundColor('var(--off-black)')"></div>
+						<div data-bottom-background="transparent" onclick="setAnnotationBottomBackgroundColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Text Color</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-bottom-text="var(--pink)" style="background-color: var(--pink)" onclick="setAnnotationBottomFontColor('var(--pink)')"></div>
+						<div data-bottom-text="var(--green)" style="background-color: var(--green)" onclick="setAnnotationBottomFontColor('var(--green)')"></div>
+						<div data-bottom-text="var(--blue)" style="background-color: var(--blue)" onclick="setAnnotationBottomFontColor('var(--blue)')"></div>
+						<div data-bottom-text="var(--yellow)" style="background-color: var(--yellow)" onclick="setAnnotationBottomFontColor('var(--yellow)')"></div>
+						<div data-bottom-text="var(--purple)" style="background-color: var(--purple)" onclick="setAnnotationBottomFontColor('var(--purple)')"></div>
+						<div data-bottom-text="var(--red)" style="background-color: var(--red)" onclick="setAnnotationBottomFontColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-bottom-text="var(--off-white)" style="background-color: var(--off-white)" onclick="setAnnotationBottomFontColor('var(--off-white)')"></div>
+						<div data-bottom-text="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setAnnotationBottomFontColor('var(--light-gray)')"></div>
+						<div data-bottom-text="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setAnnotationBottomFontColor('var(--dark-gray)')"></div>
+						<div data-bottom-text="var(--off-black)" style="background-color: var(--off-black)" onclick="setAnnotationBottomFontColor('var(--off-black)')" data-active="1"></div>
+						<div data-bottom-text="transparent" onclick="setAnnotationBottomFontColor('transparent')" class="controls-toggle-empty"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-size" name="annotation-bottom-font-size" type="range" min="1.0" max="5.0" step=".1" value="2" oninput="setAnnotationBottomFontSize(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-size" onclick="resetAnnotationBottomFontSize()">2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Weight</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-weight" name="annotation-bottom-font-weight" type="range" min="100" max="900" step="10" value="700" oninput="setAnnotationBottomFontWeight(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-weight" onclick="resetAnnotationBottomFontWeight()">700</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Serif</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-serif" name="annotation-bottom-font-serif" type="range" min="0" max="100" step="1" value="0" oninput="setAnnotationBottomFontSerif(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-serif" onclick="resetAnnotationBottomFontSerif()">0</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">Animation</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div data-bottom-animation="true" onclick="toggleAnnotationBottomAnimation(true);" data-active="1">On</div>
+						<div data-bottom-animation="false" onclick="toggleAnnotationBottomAnimation(false);">Off</div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Drift</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-drift" name="annotation-bottom-font-drift" type="range" min="0" max="5" step=".1" value="1" oninput="setAnnotationBottomFontDrift(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-drift" onclick="resetAnnotationBottomFontDrift()">1</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Rotation</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-rotation" name="annotation-bottom-font-rotation" type="range" min="-90" max="90" step="1" value="5" oninput="setAnnotationBottomFontRotation(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-rotation" onclick="resetAnnotationBottomFontRotation()">5</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Speed</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" id="annotation-bottom-font-speed" name="annotation-bottom-font-speed" type="range" min=".5" max="5" step=".1" value="4" oninput="setAnnotationBottomFontSpeed(this.value)">
+						<label class="controls-slider-label" for="annotation-bottom-font-speed" onclick="resetAnnotationBottomFontSpeed()">4</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">Reset</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="resetAnnotationBottomPosition();">Reposition Text</div>
+					</div>
+					<div class="controls-toggles">
+						<div onclick="randomizeAnnotationBottomSettings();">Randomize</div>
+						<div onclick="resetAnnotationBottomSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="controls-section" style="--primary: var(--yellow);" id="bubbles">
+				<h2 class="controls-section-heading" onclick="collapseSection('bubbles');">Bubbles</h2>
+
+				<button class="controls-section-hide" onclick="toggleBubbles();">
+					<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm8.413 7c-1.837 2.878-4.897 5.5-8.413 5.5-3.465 0-6.532-2.632-8.404-5.5 1.871-2.868 4.939-5.5 8.404-5.5 3.518 0 6.579 2.624 8.413 5.5zm-8.411-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill-rule="nonzero"/></svg>
+				</button>
+
+				<h3 class="controls-subsection-heading">Fill</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-bubble-fill="var(--pink)" style="background-color: var(--pink)" onclick="setBubbleFillColor('var(--pink)')"></div>
+						<div data-bubble-fill="var(--green)" style="background-color: var(--green)" onclick="setBubbleFillColor('var(--green)')"></div>
+						<div data-bubble-fill="var(--blue)" style="background-color: var(--blue)" onclick="setBubbleFillColor('var(--blue)')"></div>
+						<div data-bubble-fill="var(--yellow)" style="background-color: var(--yellow)" onclick="setBubbleFillColor('var(--yellow)')"></div>
+						<div data-bubble-fill="var(--purple)" style="background-color: var(--purple)" onclick="setBubbleFillColor('var(--purple)')"></div>
+						<div data-bubble-fill="var(--red)" style="background-color: var(--red)" onclick="setBubbleFillColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-bubble-fill="var(--off-white)" style="background-color: var(--off-white)" onclick="setBubbleFillColor('var(--off-white)')"></div>
+						<div data-bubble-fill="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setBubbleFillColor('var(--light-gray)')"></div>
+						<div data-bubble-fill="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setBubbleFillColor('var(--dark-gray)')"></div>
+						<div data-bubble-fill="var(--off-black)" style="background-color: var(--off-black)" onclick="setBubbleFillColor('var(--off-black)')"></div>
+						<div data-bubble-fill="transparent" onclick="setBubbleFillColor('transparent')" class="controls-toggle-empty"><div></div></div>
+						<div data-bubble-fill="unset" style="background-image: linear-gradient(to top right, var(--pink) 0%, var(--green) 20%, var(--blue) 40%, var(--yellow) 60%, var(--purple) 80%, var(--red) 100%)" onclick="setBubbleFillColor('unset')" data-active="1"></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Outline</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-bubble-outline="var(--pink)" style="background-color: var(--pink)" onclick="setBubbleOutlineColor('var(--pink)')"></div>
+						<div data-bubble-outline="var(--green)" style="background-color: var(--green)" onclick="setBubbleOutlineColor('var(--green)')"></div>
+						<div data-bubble-outline="var(--blue)" style="background-color: var(--blue)" onclick="setBubbleOutlineColor('var(--blue)')"></div>
+						<div data-bubble-outline="var(--yellow)" style="background-color: var(--yellow)" onclick="setBubbleOutlineColor('var(--yellow)')"></div>
+						<div data-bubble-outline="var(--purple)" style="background-color: var(--purple)" onclick="setBubbleOutlineColor('var(--purple)')"></div>
+						<div data-bubble-outline="var(--red)" style="background-color: var(--red)" onclick="setBubbleOutlineColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-bubble-outline="var(--off-white)" style="background-color: var(--off-white)" onclick="setBubbleOutlineColor('var(--off-white)')"></div>
+						<div data-bubble-outline="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setBubbleOutlineColor('var(--light-gray)')"></div>
+						<div data-bubble-outline="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setBubbleOutlineColor('var(--dark-gray)')"></div>
+						<div data-bubble-outline="var(--off-black)" style="background-color: var(--off-black)" onclick="setBubbleOutlineColor('var(--off-black)')"></div>
+						<div data-bubble-outline="transparent" onclick="setBubbleOutlineColor('transparent')" class="controls-toggle-empty" data-active="1"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Outline Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="bubble-outline-size" name="bubble-outline-size" min="0" max="25" step="1" value="4" oninput="setBubbleOutlineSize(this.value)">
+						<label class="controls-slider-label" for="bubble-outline-size" onclick="resetBubbleOutlineSize()">4</label>
+					</div>
+				</div>
+				
+				<h3 class="controls-subsection-heading">Shape</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="setBubbleRadius('50%'); setBubbleRatio('square'); setBubbleShape('circles');" data-active="1" data-shape="circles">Circles</div>
+						<div onclick="setBubbleRadius('0%'); setBubbleRatio('square'); setBubbleShape('squares');" data-shape="squares">Squares</div>
+					</div>
+					<div class="controls-toggles">
+						<div onclick="setBubbleRadius('50%'); setBubbleRatio('rect'); setBubbleShape('ovals');" data-shape="ovals">Ovals</div>
+						<div onclick="setBubbleRadius('0%'); setBubbleRatio('rect'); setBubbleShape('rectangles');" data-shape="rectangles">Rectangles</div>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">Quantity</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="bubble-quantity" name="bubble-quantity" min="1" max="500" step="1" value="250" oninput="setBubbleQuantity(this.value)">
+						<label class="controls-slider-label" for="bubble-quantity" onclick="resetBubbleQuantity()">250</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="bubble-size" name="bubble-size" min="1" max="25" step=".5" value="5" oninput="setBubbleSize(this.value)">
+						<label class="controls-slider-label" for="bubble-size" onclick="resetBubbleSize()">2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Drift</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="bubble-drift" name="bubble-drift" min="0" max="1000" step="10" value="250" oninput="setBubbleDrift(this.value)">
+						<label class="controls-slider-label" for="bubble-drift" onclick="resetBubbleDrift()">250</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">All Settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="randomizeBubbleSettings();">Randomize</div>
+						<div onclick="resetBubbleSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="controls-section" style="--primary: var(--purple);" id="background">
+				<h2 class="controls-section-heading" onclick="collapseSection('background');">Background</h2>
+
+				<h3 class="controls-subsection-heading">Color</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-background-primary="var(--pink)" style="background-color: var(--pink)" onclick="setBackgroundPrimaryColor('var(--pink)')"></div>
+						<div data-background-primary="var(--green)" style="background-color: var(--green)" onclick="setBackgroundPrimaryColor('var(--green)')"></div>
+						<div data-background-primary="var(--blue)" style="background-color: var(--blue)" onclick="setBackgroundPrimaryColor('var(--blue)')"></div>
+						<div data-background-primary="var(--yellow)" style="background-color: var(--yellow)" onclick="setBackgroundPrimaryColor('var(--yellow)')"></div>
+						<div data-background-primary="var(--purple)" style="background-color: var(--purple)" onclick="setBackgroundPrimaryColor('var(--purple)')"></div>
+						<div data-background-primary="var(--red)" style="background-color: var(--red)" onclick="setBackgroundPrimaryColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-background-primary="var(--off-white)" style="background-color: var(--off-white)" onclick="setBackgroundPrimaryColor('var(--off-white)')"></div>
+						<div data-background-primary="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setBackgroundPrimaryColor('var(--light-gray)')" data-active="1"></div>
+						<div data-background-primary="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setBackgroundPrimaryColor('var(--dark-gray)')"></div>
+						<div data-background-primary="var(--off-black)" style="background-color: var(--off-black)" onclick="setBackgroundPrimaryColor('var(--off-black)')"></div>
+						<div data-background-primary="gradient" style="background-image: linear-gradient(to top right, var(--pink) 0%, var(--green) 20%, var(--blue) 40%, var(--yellow) 60%, var(--purple) 80%, var(--red) 100%)" onclick="setBackgroundPrimaryColor('gradient')"></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Checkerboard</h3>
+				<div class="controls-subsection">					
+					<div class="controls-toggles">
+						<div data-background-secondary="var(--pink)" style="background-color: var(--pink)" onclick="setBackgroundSecondaryColor('var(--pink)')"></div>
+						<div data-background-secondary="var(--green)" style="background-color: var(--green)" onclick="setBackgroundSecondaryColor('var(--green)')"></div>
+						<div data-background-secondary="var(--blue)" style="background-color: var(--blue)" onclick="setBackgroundSecondaryColor('var(--blue)')"></div>
+						<div data-background-secondary="var(--yellow)" style="background-color: var(--yellow)" onclick="setBackgroundSecondaryColor('var(--yellow)')"></div>
+						<div data-background-secondary="var(--purple)" style="background-color: var(--purple)" onclick="setBackgroundSecondaryColor('var(--purple)')"></div>
+						<div data-background-secondary="var(--red)" style="background-color: var(--red)" onclick="setBackgroundSecondaryColor('var(--red)')"></div>
+					</div>
+					<div class="controls-toggles">
+						<div data-background-secondary="var(--off-white)" style="background-color: var(--off-white)" onclick="setBackgroundSecondaryColor('var(--off-white)')"></div>
+						<div data-background-secondary="var(--light-gray)" style="background-color: var(--light-gray)" onclick="setBackgroundSecondaryColor('var(--light-gray)')"></div>
+						<div data-background-secondary="var(--dark-gray)" style="background-color: var(--dark-gray)" onclick="setBackgroundSecondaryColor('var(--dark-gray)')"></div>
+						<div data-background-secondary="var(--off-black)" style="background-color: var(--off-black)" onclick="setBackgroundSecondaryColor('var(--off-black)')"></div>
+						<div data-background-secondary="transparent" onclick="setBackgroundSecondaryColor('transparent')" class="controls-toggle-empty" data-active="1"><div></div></div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Checkerboard Size</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="background-size" name="background-size" min="1.0" max="5.0" step=".1" value="2" oninput="setBackgroundSize(this.value)">
+						<label class="controls-slider-label" for="background-size" onclick="resetBackgroundSize()">2</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Checkerboard Speed</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="background-move-speed" name="background-move-speed" min=".5" max="5.0" step=".1" value="2.5" oninput="setBackgroundMoveSpeed(this.value)">
+						<label class="controls-slider-label" for="background-move-speed" onclick="resetBackgroundMoveSpeed()">2.5</label>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">All Settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="randomizeBackgroundSettings();">Randomize</div>
+						<div onclick="resetBackgroundSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="controls-section" style="--primary: var(--red);" id="canvas">
+				<h2 class="controls-section-heading" onclick="collapseSection('canvas');">Canvas</h2>
+
+				<h3 class="controls-subsection-heading">Aspect Ratio</h3>
+				<div class="controls-subsection">
+					<div class="controls-toggles">
+						<div data-aspect-ratio="1:1" onclick="setAspectRatio(100, 100); setAspectBtn('1:1')">1:1 (Square)</div>
+					</div>
+					<div class="controls-toggles">
+						<div data-aspect-ratio="4:3" onclick="setAspectRatio(100, 75); setAspectBtn('4:3')" data-active="1">4:3</div>
+						<div data-aspect-ratio="3:4" onclick="setAspectRatio(75, 100); setAspectBtn('3:4')">3:4</div>
+					</div>
+					<div class="controls-toggles">
+						<div data-aspect-ratio="16:9" onclick="setAspectRatio(100, 56.25); setAspectBtn('16:9')">16:9</div>
+						<div data-aspect-ratio="9:16" onclick="setAspectRatio(56.25, 100); setAspectBtn('9:16')">9:16</div>
+					</div>
+					<div class="controls-toggles">
+						<div data-aspect-ratio="2:1" onclick="setAspectRatio(100, 50); setAspectBtn('2:1')">2:1</div>
+						<div data-aspect-ratio="1:2" onclick="setAspectRatio(50, 100); setAspectBtn('1:2')">1:2</div>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">X Position</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="canvas-x-position" name="canvas-x-position" min="-100" max="100" step=".1" value="0" oninput="setCanvasXPosition(this.value)">
+						<label class="controls-slider-label" for="canvas-x-position" onclick="resetCanvasXPosition()">0</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Y Position</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="canvas-y-position" name="canvas-y-position" min="-100" max="100" step=".1" value="0" oninput="setCanvasYPosition(this.value)">
+						<label class="controls-slider-label" for="canvas-y-position" onclick="resetCanvasYPosition()">0</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Scale</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="canvas-scale" name="canvas-scale" min=".25" max="3" step=".01" value="1" oninput="setCanvasScale(this.value)">
+						<label class="controls-slider-label" for="canvas-scale" onclick="resetCanvasScale()">1</label>
+					</div>
+				</div>
+
+				<h3 class="controls-subsection-heading">Corner Radius</h3>
+				<div class="controls-subsection">
+					<div class="controls-sliders">
+						<input class="controls-slider" type="range" id="canvas-radius" name="canvas-radius" min="0" max="50" step="1" value="12" oninput="setCanvasRadius(this.value)">
+						<label class="controls-slider-label" for="canvas-radius" onclick="resetCanvasRadius()">12</label>
+					</div>
+					<div class="controls-toggles">
+						<div data-corner-radius-units="px" onclick="setCanvasRadiusUnits('px');" data-active="1">px</div>
+						<div data-corner-radius-units="%" onclick="setCanvasRadiusUnits('%');">%</div>
+					</div>
+				</div>
+
+				<div class="controls-divider"></div>
+
+				<h3 class="controls-subsection-heading">All Settings</h3>
+				<div class="controls-subsection controls-subsection">
+					<div class="controls-toggles">
+						<div onclick="resetCanvasPosition();">Center</div>
+						<div onclick="resetCanvasSettings();">Reset</div>
+					</div>
+				</div>
+			</section>
+		</nav>
+
+		<div class="fullscreen-notice">
+			<div>Click anywhere to exit fullscreen!</div>
+			<div>Mouse controls (pan, zoom) still work in fullscreen mode.</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
